@@ -101,8 +101,8 @@ export default function PaymentPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
                   <Icon name="Search" size={32} className="text-white" />
                 </div>
-                <h2 className="text-xl font-bold mb-2">Заказ №{orderId}</h2>
-                <p className="text-gray-400 text-sm">Поиск реквизитов для оплаты</p>
+                <h2 className="text-xl font-bold mb-2 text-white">Заказ №{orderId}</h2>
+                <p className="text-gray-100 text-sm font-medium">Поиск реквизитов для оплаты</p>
               </div>
               
               <Progress value={loadingProgress} className="h-2 mb-4" />
@@ -128,23 +128,23 @@ export default function PaymentPage() {
                 <Icon name="CheckCircle" size={48} className="text-white" />
               </div>
               
-              <h2 className="text-2xl font-bold mb-3 text-green-400">Платеж подтвержден!</h2>
-              <p className="text-gray-300 mb-6">Ваш платеж успешно обработан</p>
+              <h2 className="text-2xl font-bold mb-3 text-green-300">Платеж подтвержден!</h2>
+              <p className="text-gray-100 mb-6 font-medium">Ваш платеж успешно обработан</p>
               
               <div className="bg-black/50 rounded-lg p-4 mb-6 border border-gray-800">
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="text-left">
-                    <p className="text-gray-500">Сумма</p>
-                    <p className="font-bold">1999.00 RUB</p>
+                    <p className="text-gray-300">Сумма</p>
+                    <p className="font-bold text-white">1999.00 RUB</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-gray-500">Статус</p>
-                    <p className="font-bold text-green-400">Оплачено</p>
+                    <p className="text-gray-300">Статус</p>
+                    <p className="font-bold text-green-300">Оплачено</p>
                   </div>
                 </div>
                 <div className="mt-3 pt-3 border-t border-gray-800">
-                  <p className="text-gray-500 text-xs">ID транзакции</p>
-                  <p className="font-mono text-xs">{transactionId}</p>
+                  <p className="text-gray-300 text-xs font-medium">ID транзакции</p>
+                  <p className="font-mono text-xs text-white">{transactionId}</p>
                 </div>
               </div>
 
@@ -172,14 +172,14 @@ export default function PaymentPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
                   <Icon name="Search" size={32} className="text-white" />
                 </div>
-                <h2 className="text-xl font-bold mb-2">Проверка платежа</h2>
-                <p className="text-gray-400 text-sm">Ожидайте подтверждения от банка</p>
+                <h2 className="text-xl font-bold mb-2 text-white">Проверка платежа</h2>
+                <p className="text-gray-100 text-sm font-medium">Ожидайте подтверждения от банка</p>
               </div>
               
               <Progress value={checkProgress} className="h-2 mb-4" />
               
-              <div className="text-center text-sm text-gray-400">
-                <p>Проверка может занять до 30 секунд</p>
+              <div className="text-center text-sm text-gray-100">
+                <p className="font-medium">Проверка может занять до 30 секунд</p>
               </div>
             </CardContent>
           </Card>
@@ -193,8 +193,8 @@ export default function PaymentPage() {
       <div className="container mx-auto px-4 py-8 max-w-2xl">
         {/* Header */}
         <div className="text-center mb-6">
-          <h1 className="text-2xl font-bold mb-2">Оплата заказа</h1>
-          <p className="text-gray-400">Заказ №{orderId}</p>
+          <h1 className="text-2xl font-bold mb-2 text-white">Оплата заказа</h1>
+          <p className="text-gray-100 font-medium">Заказ №{orderId}</p>
         </div>
 
         {/* Timer */}
@@ -202,8 +202,8 @@ export default function PaymentPage() {
           <div className="flex items-center gap-3">
             <Icon name="Clock" className="text-yellow-500" size={24} />
             <div>
-              <p className="font-semibold">Время на оплату</p>
-              <p className="text-sm text-gray-400">Платеж будет отменен через:</p>
+              <p className="font-semibold text-white">Время на оплату</p>
+              <p className="text-sm text-gray-100">Платеж будет отменен через:</p>
             </div>
           </div>
           <div className="text-2xl font-mono font-bold text-yellow-400">
@@ -215,34 +215,34 @@ export default function PaymentPage() {
         <Card className="bg-gradient-to-br from-gray-900 to-black border-gray-800 mb-6">
           <CardContent className="p-6">
             <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-6 text-center">
-              <p className="text-green-400 font-semibold mb-2">Реквизиты найдены</p>
-              <p className="text-sm text-gray-400">Переводите точную сумму, иначе перевод не будет зачислен</p>
+              <p className="text-green-300 font-bold mb-2">Реквизиты найдены</p>
+              <p className="text-sm text-gray-100 font-medium">Переводите точную сумму, иначе перевод не будет зачислен</p>
             </div>
 
             <div className="space-y-4">
               <div className="bg-black/50 rounded-lg p-4 border border-gray-800">
-                <p className="text-gray-500 text-sm mb-1">ID платежа</p>
-                <p className="font-mono text-lg">{paymentId}</p>
+                <p className="text-gray-300 text-sm mb-1 font-medium">ID платежа</p>
+                <p className="font-mono text-lg text-white">{paymentId}</p>
               </div>
 
               <div className="bg-black/50 rounded-lg p-4 border border-gray-800">
-                <p className="text-gray-500 text-sm mb-3">Переведите на указанный номер телефона:</p>
+                <p className="text-gray-100 text-sm mb-3 font-medium">Переведите на указанный номер телефона:</p>
                 <div className="space-y-3">
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Номер телефона</p>
-                    <p className="text-xl font-mono font-bold">+7 981 848 79 57</p>
+                    <p className="text-xs text-gray-200 mb-1 font-medium">Номер телефона</p>
+                    <p className="text-xl font-mono font-bold text-white">+7 981 848 79 57</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Сумма</p>
-                    <p className="text-2xl font-bold text-green-400">1999.00 RUB</p>
+                    <p className="text-xs text-gray-200 mb-1 font-medium">Сумма</p>
+                    <p className="text-2xl font-bold text-green-300">1999.00 RUB</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">ФИО получателя</p>
-                    <p className="font-semibold">Людмила С.</p>
+                    <p className="text-xs text-gray-200 mb-1 font-medium">ФИО получателя</p>
+                    <p className="font-semibold text-white">Людмила С.</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Банк</p>
-                    <p className="font-semibold">Яндекс Банк</p>
+                    <p className="text-xs text-gray-200 mb-1 font-medium">Банк</p>
+                    <p className="font-semibold text-white">Яндекс Банк</p>
                   </div>
                 </div>
               </div>

@@ -21,20 +21,20 @@ export default function CheckingAnimation() {
   }, [checkValue, navigate]);
 
   const stages = [
-    { text: 'Подключение к серверу...', duration: 7000 },
-    { text: 'Поиск аккаунтов в соцсетях и на сайтах знакомств...', duration: 9000 },
-    { text: 'Анализ активности в сети...', duration: 8000 },
-    { text: 'Цифровой анализ мессенджеров...', duration: 9000 },
-    { text: 'Определение геопозиции...', duration: 8000 },
-    { text: 'Анализ скрытых интересов в сети...', duration: 9000 },
-    { text: 'Поиск скрытых друзей...', duration: 8000 },
-    { text: 'Обнаружение диалогов VK...', duration: 9000 },
-    { text: 'Обнаружение диалогов WhatsApp...', duration: 8000 },
-    { text: 'Выгрузка активности в соцсетях...', duration: 9000 },
-    { text: 'Анализ цифровых поведений...', duration: 8000 },
-    { text: 'Обнаружены удалённые аккаунты...', duration: 9000 },
-    { text: 'Анализ обнаруженных скрытых профилей и аккаунтов...', duration: 10000 },
-    { text: 'Финальная обработка результатов...', duration: 9000 },
+    { text: 'ПОДКЛЮЧЕНИЕ К СЕРВЕРУ АНАЛИЗА', description: 'Установка защищенного соединения с базой данных', duration: 7000 },
+    { text: 'ПОИСК АККАУНТОВ В СОЦСЕТЯХ', description: 'Сканирование ВКонтакте, Instagram, Telegram, OK.ru', duration: 9000 },
+    { text: 'ПОИСК ПРОФИЛЕЙ НА САЙТАХ ЗНАКОМСТВ', description: 'Анализ Tinder, Badoo, Mamba и других платформ', duration: 8000 },
+    { text: 'АНАЛИЗ АКТИВНОСТИ В МЕССЕНДЖЕРАХ', description: 'Цифровой анализ WhatsApp, Telegram, Viber', duration: 9000 },
+    { text: 'ОПРЕДЕЛЕНИЕ ГЕОЛОКАЦИИ', description: 'Выгрузка часто посещаемых мест за последний месяц', duration: 8000 },
+    { text: 'АНАЛИЗ СКРЫТЫХ ИНТЕРЕСОВ', description: 'Поиск подписок, лайков и комментариев в соцсетях', duration: 9000 },
+    { text: 'ПОИСК СКРЫТЫХ ДРУЗЕЙ ВКОНТАКТЕ', description: 'Обнаружение скрытых контактов и их активности', duration: 8000 },
+    { text: 'АНАЛИЗ ПЕРЕПИСКИ ВКОНТАКТЕ', description: 'Определение самых активных диалогов VK', duration: 9000 },
+    { text: 'АНАЛИЗ ПЕРЕПИСКИ WHATSAPP', description: 'Выявление частых контактов в WhatsApp', duration: 8000 },
+    { text: 'ВЫГРУЗКА ЦИФРОВОЙ АКТИВНОСТИ', description: 'Сбор данных о лайках, репостах, комментариях', duration: 9000 },
+    { text: 'АНАЛИЗ ЦИФРОВОГО ПОВЕДЕНИЯ', description: 'Определение паттернов онлайн-активности', duration: 8000 },
+    { text: 'ПОИСК УДАЛЁННЫХ АККАУНТОВ', description: 'Обнаружение ранее удалённых профилей и анкет', duration: 9000 },
+    { text: 'АНАЛИЗ СКРЫТЫХ ПРОФИЛЕЙ', description: 'Проверка альтернативных и фейковых аккаунтов', duration: 10000 },
+    { text: 'ФИНАЛЬНАЯ ОБРАБОТКА ДАННЫХ', description: 'Формирование детального отчета о проверке', duration: 9000 },
   ];
 
   const totalDuration = stages.reduce((sum, stage) => sum + stage.duration, 0);
@@ -205,13 +205,14 @@ export default function CheckingAnimation() {
             <Progress value={progress} className="h-2 mb-6" />
 
             {/* Current stage */}
-            <div className="bg-black/50 rounded-lg p-4 border border-gray-800 mb-6">
-              <div className="flex items-center gap-3">
+            <div className="bg-black/50 rounded-lg p-5 border border-gray-800 mb-6">
+              <div className="flex items-center gap-3 mb-2">
                 <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                <p className="text-lg font-mono text-gray-200">
+                <p className="text-xl font-bold text-white">
                   {stages[currentStage]?.text}
                 </p>
               </div>
+              <p className="text-sm text-gray-200 ml-5">{stages[currentStage]?.description}</p>
             </div>
 
             {/* Data blocks animation */}
@@ -226,7 +227,7 @@ export default function CheckingAnimation() {
                   }`}
                 >
                   {showData && idx <= (currentStage * 8) / stages.length && (
-                    <div className="h-full flex items-center justify-center font-mono text-xs text-gray-500">
+                    <div className="h-full flex items-center justify-center font-mono text-xs text-white font-bold">
                       {Array.from({ length: 8 }, () => '█').join('')}
                     </div>
                   )}
@@ -238,8 +239,8 @@ export default function CheckingAnimation() {
             <div className="mt-6 flex items-start gap-3 bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4">
               <div className="text-yellow-500 text-xl">⚠️</div>
               <div className="flex-1 text-sm">
-                <p className="text-yellow-200 font-semibold mb-1">Не закрывайте страницу</p>
-                <p className="text-gray-400">
+                <p className="text-yellow-100 font-semibold mb-1">Не закрывайте страницу</p>
+                <p className="text-gray-100">
                   Идет глубокий анализ цифровой активности. Процесс занимает время для получения максимально полных данных.
                 </p>
               </div>

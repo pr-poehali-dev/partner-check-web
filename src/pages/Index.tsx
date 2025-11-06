@@ -119,29 +119,29 @@ export default function Index() {
             <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-white to-blue-500 animate-fade-in">
               Проверка на верность онлайн
             </h2>
-            <p className="text-lg md:text-2xl text-gray-300 mb-6 md:mb-8 animate-fade-in">
+            <p className="text-lg md:text-2xl text-gray-100 mb-6 md:mb-8 animate-fade-in font-medium">
               Узнайте всю правду о цифровой жизни вашей второй половины
             </p>
 
             {/* Stats */}
             <div className="hidden md:grid grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-12">
               <div className="bg-gradient-to-br from-red-900/30 to-transparent p-4 rounded-lg border border-red-500/30">
-                <div className="text-2xl md:text-4xl font-bold text-red-500 mb-2">3000+</div>
-                <div className="text-xs md:text-sm text-gray-400">успешных проверок</div>
+                <div className="text-2xl md:text-4xl font-bold text-red-400 mb-2">3000+</div>
+                <div className="text-xs md:text-sm text-gray-200">успешных проверок</div>
               </div>
               <div className="bg-gradient-to-br from-blue-900/30 to-transparent p-4 rounded-lg border border-blue-500/30">
-                <div className="text-2xl md:text-4xl font-bold text-blue-500 mb-2">5 минут</div>
-                <div className="text-xs md:text-sm text-gray-400">среднее время</div>
+                <div className="text-2xl md:text-4xl font-bold text-blue-400 mb-2">5 минут</div>
+                <div className="text-xs md:text-sm text-gray-200">среднее время</div>
               </div>
               <div className="bg-gradient-to-br from-purple-900/30 to-transparent p-4 rounded-lg border border-purple-500/30">
-                <div className="text-2xl md:text-4xl font-bold text-purple-500 mb-2">100%</div>
-                <div className="text-xs md:text-sm text-gray-400">конфиденциальности</div>
+                <div className="text-2xl md:text-4xl font-bold text-purple-400 mb-2">100%</div>
+                <div className="text-xs md:text-sm text-gray-200">конфиденциальности</div>
               </div>
             </div>
 
             {/* Form */}
             <div ref={formRef} className="bg-gradient-to-br from-gray-900 to-black p-6 md:p-8 rounded-2xl border border-red-500/30 shadow-2xl shadow-red-500/20 max-w-2xl mx-auto">
-              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Начните проверку прямо сейчас</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-white">Начните проверку прямо сейчас</h3>
               <div className="space-y-4">
                 <Input
                   placeholder="Введите ссылку ВК или номер телефона"
@@ -184,8 +184,8 @@ export default function Index() {
                   <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <Icon name={benefit.icon as any} className="text-white" size={24} />
                   </div>
-                  <h4 className="text-lg md:text-xl font-bold mb-2">{benefit.title}</h4>
-                  <p className="text-sm md:text-base text-gray-400">{benefit.desc}</p>
+                  <h4 className="text-lg md:text-xl font-bold mb-2 text-white">{benefit.title}</h4>
+                  <p className="text-sm md:text-base text-gray-100">{benefit.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -203,29 +203,29 @@ export default function Index() {
             <div className="flex gap-4 p-4 md:p-6 bg-gradient-to-br from-gray-900 to-black rounded-xl border border-gray-800">
               <Icon name="Lock" className="text-red-500 flex-shrink-0" size={32} />
               <div>
-                <h4 className="text-lg md:text-xl font-bold mb-2">100% Анонимность</h4>
-                <p className="text-sm md:text-base text-gray-400">Никто не узнает о проверке. Полная конфиденциальность гарантирована.</p>
+                <h4 className="text-lg md:text-xl font-bold mb-2 text-white">100% Анонимность</h4>
+                <p className="text-sm md:text-base text-gray-100">Никто не узнает о проверке. Полная конфиденциальность гарантирована.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 md:p-6 bg-gradient-to-br from-gray-900 to-black rounded-xl border border-gray-800">
               <Icon name="Zap" className="text-blue-500 flex-shrink-0" size={32} />
               <div>
-                <h4 className="text-lg md:text-xl font-bold mb-2">Быстрый результат</h4>
-                <p className="text-sm md:text-base text-gray-400">Получите детальный отчет уже через 5-10 минут после оплаты.</p>
+                <h4 className="text-lg md:text-xl font-bold mb-2 text-white">Быстрый результат</h4>
+                <p className="text-sm md:text-base text-gray-100">Получите детальный отчет уже через 5-10 минут после оплаты.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 md:p-6 bg-gradient-to-br from-gray-900 to-black rounded-xl border border-gray-800">
               <Icon name="CheckCircle" className="text-green-500 flex-shrink-0" size={32} />
               <div>
-                <h4 className="text-lg md:text-xl font-bold mb-2">Гарантия качества</h4>
-                <p className="text-sm md:text-base text-gray-400">Мы предоставляем только проверенную информацию с подтверждением.</p>
+                <h4 className="text-lg md:text-xl font-bold mb-2 text-white">Гарантия качества</h4>
+                <p className="text-sm md:text-base text-gray-100">Мы предоставляем только проверенную информацию с подтверждением.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 md:p-6 bg-gradient-to-br from-gray-900 to-black rounded-xl border border-gray-800">
               <Icon name="ShieldCheck" className="text-purple-500 flex-shrink-0" size={32} />
               <div>
-                <h4 className="text-lg md:text-xl font-bold mb-2">Легальность</h4>
-                <p className="text-sm md:text-base text-gray-400">Работаем только с открытыми данными в рамках закона РФ.</p>
+                <h4 className="text-lg md:text-xl font-bold mb-2 text-white">Легальность</h4>
+                <p className="text-sm md:text-base text-gray-100">Работаем только с открытыми данными в рамках закона РФ.</p>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function Index() {
             <h3 className="text-2xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-blue-500">
               3000+ положительных отзывов
             </h3>
-            <p className="text-base md:text-lg text-gray-400">Реальные истории наших клиентов</p>
+            <p className="text-base md:text-lg text-gray-100">Реальные истории наших клиентов</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {testimonials.slice(0, window.innerWidth < 768 ? 2 : 6).map((testimonial, idx) => (
@@ -250,8 +250,8 @@ export default function Index() {
                       <Icon key={i} name="Star" className="text-yellow-500 fill-yellow-500" size={16} />
                     ))}
                   </div>
-                  <p className="text-sm md:text-base text-gray-300 mb-4 italic">&ldquo;{testimonial.text}&rdquo;</p>
-                  <p className="text-xs md:text-sm text-gray-500 font-semibold">{testimonial.author}</p>
+                  <p className="text-sm md:text-base text-gray-100 mb-4 italic">&ldquo;{testimonial.text}&rdquo;</p>
+                  <p className="text-xs md:text-sm text-gray-300 font-semibold">{testimonial.author}</p>
                 </CardContent>
               </Card>
             ))}

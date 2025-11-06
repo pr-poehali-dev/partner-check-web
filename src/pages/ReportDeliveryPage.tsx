@@ -31,8 +31,8 @@ export default function ReportDeliveryPage() {
               <Icon name="Shield" className="text-white" size={36} />
             </div>
             <div className="text-left">
-              <h1 className="text-2xl font-bold">Верность-Про</h1>
-              <p className="text-sm text-gray-400">Профессиональный Онлайн-сервис</p>
+              <h1 className="text-2xl font-bold text-white">Верность-Про</h1>
+              <p className="text-sm text-gray-200">Профессиональный Онлайн-сервис</p>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function ReportDeliveryPage() {
               <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full mb-6 animate-scale-in shadow-lg shadow-green-500/50">
                 <Icon name="CheckCircle" size={56} className="text-white" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-500 to-blue-500 animate-fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-green-300 via-green-400 to-blue-400 animate-fade-in">
                 Ваш отчет успешно сформирован!
               </h2>
             </div>
@@ -54,20 +54,20 @@ export default function ReportDeliveryPage() {
             <div className="bg-black/50 rounded-lg p-6 mb-8 border border-gray-800">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="text-gray-500 mb-1">Номер заказа</p>
-                  <p className="font-mono font-bold">{orderNumber}</p>
+                  <p className="text-gray-200 mb-1 font-medium">Номер заказа</p>
+                  <p className="font-mono font-bold text-white">{orderNumber}</p>
                 </div>
                 <div>
-                  <p className="text-gray-500 mb-1">ID транзакции</p>
-                  <p className="font-mono text-xs">{transactionId}</p>
+                  <p className="text-gray-200 mb-1 font-medium">ID транзакции</p>
+                  <p className="font-mono text-xs text-white">{transactionId}</p>
                 </div>
                 <div>
-                  <p className="text-gray-500 mb-1">Тип проверки</p>
-                  <p className="font-semibold">{checkType === 'vk' ? 'ВКонтакте' : 'Номер телефона'}</p>
+                  <p className="text-gray-200 mb-1 font-medium">Тип проверки</p>
+                  <p className="font-semibold text-white">{checkType === 'vk' ? 'ВКонтакте' : 'Номер телефона'}</p>
                 </div>
                 <div>
-                  <p className="text-gray-500 mb-1">Статус</p>
-                  <p className="font-semibold text-green-400">Оплачено ✓</p>
+                  <p className="text-gray-200 mb-1 font-medium">Статус</p>
+                  <p className="font-semibold text-green-300">Оплачено ✓</p>
                 </div>
               </div>
             </div>
@@ -93,8 +93,8 @@ export default function ReportDeliveryPage() {
                 <div className="flex items-start gap-3">
                   <Icon name="AlertTriangle" className="text-yellow-500 flex-shrink-0 mt-1" size={24} />
                   <div className="text-left">
-                    <p className="font-semibold text-yellow-200 mb-2">Важная информация</p>
-                    <ul className="text-sm text-gray-300 space-y-1">
+                    <p className="font-semibold text-yellow-100 mb-2">Важная информация</p>
+                    <ul className="text-sm text-gray-100 space-y-1">
                       <li>• Повторная подача заявки не требуется, отчет уже сформирован</li>
                       <li>• В целях обеспечения конфиденциальности и анонимности, мы удаляем отчет сразу после получения вами</li>
                       <li>• Повторная отправка отчета будет недоступна</li>
@@ -109,40 +109,40 @@ export default function ReportDeliveryPage() {
               <div className="flex gap-3 p-4 bg-black/30 rounded-lg border border-gray-800">
                 <Icon name="Shield" className="text-purple-500 flex-shrink-0" size={24} />
                 <div>
-                  <p className="font-semibold mb-1 text-sm">Полная конфиденциальность</p>
-                  <p className="text-xs text-gray-400">Данные защищены и удаляются после получения</p>
+                  <p className="font-semibold mb-1 text-sm text-white">Полная конфиденциальность</p>
+                  <p className="text-xs text-gray-200">Данные защищены и удаляются после получения</p>
                 </div>
               </div>
               <div className="flex gap-3 p-4 bg-black/30 rounded-lg border border-gray-800">
                 <Icon name="Lock" className="text-red-500 flex-shrink-0" size={24} />
                 <div>
-                  <p className="font-semibold mb-1 text-sm">100% Анонимность</p>
-                  <p className="text-xs text-gray-400">Никто не узнает о проверке</p>
+                  <p className="font-semibold mb-1 text-sm text-white">100% Анонимность</p>
+                  <p className="text-xs text-gray-200">Никто не узнает о проверке</p>
                 </div>
               </div>
               <div className="flex gap-3 p-4 bg-black/30 rounded-lg border border-gray-800">
                 <Icon name="FileText" className="text-blue-500 flex-shrink-0" size={24} />
                 <div>
-                  <p className="font-semibold mb-1 text-sm">Детальный отчет</p>
-                  <p className="text-xs text-gray-400">Полная информация о цифровой активности</p>
+                  <p className="font-semibold mb-1 text-sm text-white">Детальный отчет</p>
+                  <p className="text-xs text-gray-200">Полная информация о цифровой активности</p>
                 </div>
               </div>
               <div className="flex gap-3 p-4 bg-black/30 rounded-lg border border-gray-800">
                 <Icon name="CheckCircle" className="text-green-500 flex-shrink-0" size={24} />
                 <div>
-                  <p className="font-semibold mb-1 text-sm">Проверенные данные</p>
-                  <p className="text-xs text-gray-400">Только актуальная информация</p>
+                  <p className="font-semibold mb-1 text-sm text-white">Проверенные данные</p>
+                  <p className="text-xs text-gray-200">Только актуальная информация</p>
                 </div>
               </div>
             </div>
 
             {/* Additional Info */}
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-lg p-6 border border-gray-700">
-              <h3 className="font-bold mb-3 flex items-center gap-2">
+              <h3 className="font-bold mb-3 flex items-center gap-2 text-white">
                 <Icon name="Info" className="text-blue-400" size={20} />
                 Что дальше?
               </h3>
-              <ol className="text-sm text-gray-300 space-y-2 list-decimal list-inside">
+              <ol className="text-sm text-gray-100 space-y-2 list-decimal list-inside">
                 <li>Нажмите кнопку "Получить отчет" выше</li>
                 <li>Вы будете перенаправлены в Telegram</li>
                 <li>Отчет будет отправлен вам автоматически</li>
@@ -154,7 +154,7 @@ export default function ReportDeliveryPage() {
 
         {/* Additional CTA */}
         <div className="text-center mt-6">
-          <p className="text-sm text-gray-400 mb-3">Остались вопросы? Свяжитесь с нашей службой поддержки</p>
+          <p className="text-sm text-gray-100 mb-3 font-medium">Остались вопросы? Свяжитесь с нашей службой поддержки</p>
           <Button
             variant="outline"
             className="border-gray-700 hover:bg-gray-800 text-gray-300"

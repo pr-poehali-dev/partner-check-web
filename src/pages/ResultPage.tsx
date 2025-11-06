@@ -59,10 +59,10 @@ export default function ResultPage() {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full mb-4 animate-scale-in">
             <Icon name="CheckCircle" size={48} className="text-white" />
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500">
+          <h2 className="text-2xl md:text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-400">
             Проверка успешно завершена!
           </h2>
-          <p className="text-gray-400">Отчет с результатами готов к отправке</p>
+          <p className="text-gray-100 font-medium">Отчет с результатами готов к отправке</p>
         </div>
 
         {/* Order Info */}
@@ -70,17 +70,17 @@ export default function ResultPage() {
           <CardContent className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div>
-                <p className="text-gray-500 mb-1">Тип проверки</p>
-                <p className="font-semibold">{checkType === 'vk' ? 'ВКонтакте' : 'Номер телефона'}</p>
-                <p className="text-gray-400 text-xs mt-1">{checkValue}</p>
+                <p className="text-gray-300 mb-1 font-medium">Тип проверки</p>
+                <p className="font-semibold text-white">{checkType === 'vk' ? 'ВКонтакте' : 'Номер телефона'}</p>
+                <p className="text-gray-200 text-xs mt-1">{checkValue}</p>
               </div>
               <div>
-                <p className="text-gray-500 mb-1">Номер заказа</p>
-                <p className="font-semibold font-mono">{orderNumber}</p>
+                <p className="text-gray-300 mb-1 font-medium">Номер заказа</p>
+                <p className="font-semibold font-mono text-white">{orderNumber}</p>
               </div>
               <div>
-                <p className="text-gray-500 mb-1">Дата</p>
-                <p className="font-semibold">{currentDate}</p>
+                <p className="text-gray-300 mb-1 font-medium">Дата</p>
+                <p className="font-semibold text-white">{currentDate}</p>
               </div>
             </div>
           </CardContent>
@@ -94,21 +94,21 @@ export default function ResultPage() {
                 <span className="text-2xl">👤</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Личный оператор: {operator}</h3>
-                <p className="text-gray-400 text-sm">Специалист по проверкам на верность</p>
+                <h3 className="text-xl font-bold mb-2 text-white">Личный оператор: {operator}</h3>
+                <p className="text-gray-200 text-sm">Специалист по проверкам на верность</p>
               </div>
             </div>
 
             <div className="bg-black/50 rounded-lg p-6 mb-6 border border-gray-800">
-              <h4 className="text-lg font-bold mb-4 text-green-400">Отчет сформирован!</h4>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <h4 className="text-lg font-bold mb-4 text-green-300">Отчет сформирован!</h4>
+              <p className="text-gray-100 mb-4 leading-relaxed font-medium">
                 В готовом отчете содержится подробная информация о цифровой жизни вашей второй половинки, а именно ответы на важные вопросы, по которым системе удалось найти данные:
               </p>
               
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
-                  <Icon name="CheckCircle" className="text-green-500 flex-shrink-0 mt-1" size={20} />
-                  <span className="text-sm text-gray-300">Информация о цифровой активности с пользователями ВК, WhatsApp и Telegram за последние 2 месяца — узнаете, к кому проявляет максимальную активность</span>
+                  <Icon name="CheckCircle" className="text-green-400 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-sm text-gray-100 font-medium">Информация о цифровой активности с пользователями ВК, WhatsApp и Telegram за последние 2 месяца — узнаете, к кому проявляет максимальную активность</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Icon name="CheckCircle" className="text-green-500 flex-shrink-0 mt-1" size={20} />
@@ -137,10 +137,10 @@ export default function ResultPage() {
               </ul>
 
               <div className="bg-gradient-to-r from-red-900/30 to-blue-900/30 rounded-lg p-4 border border-red-500/30 mb-6">
-                <p className="text-center text-lg font-semibold mb-2">
+                <p className="text-center text-lg font-bold mb-2 text-white">
                   Узнайте правду о цифровой жизни своей второй половинки прямо сейчас!
                 </p>
-                <p className="text-center text-sm text-gray-400">
+                <p className="text-center text-sm text-gray-100 font-medium">
                   Без нарушения личного пространства и риска раскрыть себя
                 </p>
               </div>
@@ -148,7 +148,13 @@ export default function ResultPage() {
               {/* Pricing */}
               <div className="text-center mb-6">
                 <div className="inline-flex items-baseline gap-2 mb-2">
-                  <span className="text-2xl line-through text-gray-500">2499₽</span>
+                  <span className="text-2xl line-through text-gray-400">2499₽</span>
+                  <span className="text-4xl font-bold text-green-400">1999₽</span>
+                </div>
+                <div className="inline-block bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-6">
+                  Скидка 500₽
+                </div>
+                <p className="text-sm text-gray-500">2499₽</span>
                   <span className="text-4xl font-bold text-green-400">1999₽</span>
                 </div>
                 <div className="bg-red-600 text-white text-sm font-bold px-4 py-1 rounded-full inline-block">
